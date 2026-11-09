@@ -1,0 +1,15 @@
+services:
+  toko:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      COOKIE_SECURE: ${COOKIE_SECURE:-0}
+      TRUST_PROXY: ${TRUST_PROXY:-}
+      TZ: Asia/Jakarta
+    volumes:
+      - toko-data:/app/data   # database tersimpan di sini, tidak hilang saat container diganti
+    restart: unless-stopped
+volumes:
+  toko-data:

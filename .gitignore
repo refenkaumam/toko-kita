@@ -1,0 +1,19 @@
+# dependensi
+node_modules/
+# database dan data toko (JANGAN di-commit)
+data/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+# rahasia dan konfigurasi lokal
+.env
+.env.*
+!.env.example
+# lain-lain
+*.log
+.DS_Store
+Thumbs.db
+
+# hasil backup
+backup/
